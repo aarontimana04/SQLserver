@@ -32,6 +32,7 @@ CREATE TABLE Usuarios (
   dni CHAR(8) NOT NULL,
   id_empresa INT NOT NULL,
   id_rol INT NOT NULL,
+  FOREIGN KEY (dni) REFERENCES Personas (dni),
   FOREIGN KEY (id_empresa) REFERENCES Empresas (id_empresa),
   FOREIGN KEY (id_rol) REFERENCES Rol (id_rol),
   PRIMARY KEY (dni) 
@@ -63,7 +64,8 @@ CREATE TABLE Contratos (
   id_empresa INT NOT NULL,
   id_estado INT NOT NULL,
   FOREIGN KEY (id_empresa) REFERENCES Empresas (id_empresa),
-  FOREIGN KEY (id_estado) REFERENCES Estados (id_estado)
+  FOREIGN KEY (id_estado) REFERENCES Estados (id_estado),
+  FOREIGN KEY (dni) REFERENCES Usuarios (dni)
 );
 
 CREATE TABLE Documentos (
@@ -71,6 +73,7 @@ CREATE TABLE Documentos (
   id_contrato INT NOT NULL,
   ruta_documento VARCHAR(50) NOT NULL,
   fecha_adjunto DATE NOT NULL,
+  FOREIGN KEY (id_contrato) REFERENCES Contratos (id_contrato),
   PRIMARY KEY (nombredocumento, id_contrato)
 );
 
