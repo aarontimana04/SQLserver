@@ -20,8 +20,9 @@ ADD CONSTRAINT DF_FechaRegistro DEFAULT GETDATE() FOR FechaRegistro;
 -- =====================================
 -- 3. DDL - Agregar una columna con un valor por defecto
 -- =====================================
-ALTER TABLE Clientes
+ALTER TABLE Clientes -- 
 ADD Estado NVARCHAR(20) DEFAULT 'Activo';
+ADD (NOMBRE DE LA COLUMNA) - TIPO DE DATO - POR DEFECTO (VALOR POR DEFECTO)
 
 -- =====================================
 -- 4. DDL - Modificar la tabla Clientes
@@ -29,7 +30,9 @@ ADD Estado NVARCHAR(20) DEFAULT 'Activo';
 -- =====================================
 ALTER TABLE Clientes
 ADD CONSTRAINT CHK_Edad CHECK (Edad >= 18 AND Edad <= 100);
+ADD RESTRICCION (NOMBRE DE LA RESTRICCION) REVISION (VALOR A REVISAR)
 
+ADD CONSTRAINT CHK_FECHA CHECK (FechaRegistro >= '01-01-2018');
 -- =====================================
 -- 5. DDL - Eliminar una columna
 -- Eliminar la columna Estado de la tabla Clientes
@@ -72,6 +75,7 @@ WHERE Id = 2;
 -- =====================================
 ALTER TABLE Clientes
 DROP CONSTRAINT CHK_Edad;
+ELIMINAR RESTRICCION CON EL NOMBRE (X)
 
 -- =====================================
 -- 11. DDL - Eliminar la tabla Clientes
