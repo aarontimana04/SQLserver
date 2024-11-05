@@ -20,6 +20,7 @@ CREATE TABLE Rol (
   nombre_rol VARCHAR(10) NOT NULL,
   detalles VARCHAR(50) NOT NULL
 );
+
 CREATE TABLE Clientes (
   dni CHAR(8) NOT NULL,
   direccion VARCHAR(25) NOT NULL,
@@ -82,7 +83,7 @@ CREATE TABLE ValidacionFacial (
   dni CHAR(8) NOT NULL,
   id_estado INT NOT NULL,
   FOREIGN KEY (dni) REFERENCES Clientes(dni),
-  FOREIGN KEY (id_estado) REFERENCES Estados (is_estado),
+  FOREIGN KEY (id_estado) REFERENCES Estados (id_estado),
   PRIMARY KEY (id_validacion, dni, id_estado)
 );
 
@@ -101,7 +102,7 @@ CREATE TABLE Firmas (
 CREATE TABLE Imagenes (
   id_imagen INT NOT NULL,
   id_validacion INT NOT NULL,
-  imagen VARCHAR(15) INT NOT NULL,
+  imagen VARCHAR(15) NOT NULL,
   fecha_envio_imagen DATE NOT NULL,
   detalles_imagen VARCHAR(50) NOT NULL,
   FOREIGN KEY (id_validacion) REFERENCES ValidacionFacial (id_validacion),
