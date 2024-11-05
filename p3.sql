@@ -30,9 +30,9 @@ ADD (NOMBRE DE LA COLUMNA) - TIPO DE DATO - POR DEFECTO (VALOR POR DEFECTO)
 -- =====================================
 ALTER TABLE Clientes
 ADD CONSTRAINT CHK_Edad CHECK (Edad >= 18 AND Edad <= 100);
-ADD RESTRICCION (NOMBRE DE LA RESTRICCION) REVISION (VALOR A REVISAR)
+-- ADD RESTRICCION (NOMBRE DE LA RESTRICCION) REVISION (VALOR A REVISAR)
 
-ADD CONSTRAINT CHK_FECHA CHECK (FechaRegistro >= '01-01-2018');
+-- ADD CONSTRAINT CHK_FECHA CHECK (FechaRegistro >= '01-01-2018');
 -- =====================================
 -- 5. DDL - Eliminar una columna
 -- Eliminar la columna Estado de la tabla Clientes
@@ -75,7 +75,7 @@ WHERE Id = 2;
 -- =====================================
 ALTER TABLE Clientes
 DROP CONSTRAINT CHK_Edad;
-ELIMINAR RESTRICCION CON EL NOMBRE (X)
+-- ELIMINAR RESTRICCION CON EL NOMBRE (X)
 
 -- =====================================
 -- 11. DDL - Eliminar la tabla Clientes
