@@ -1,5 +1,47 @@
 -- Operadores de comparación
+CREATE TABLE Cuenta (
+  id_cuenta INT,
+  sueldo NUMERIC(6,2),-- 2371.83 correcto 123663.99 incorrecto
+  fecha GETDATE()
+);
 
+INSERT INTO Cuenta (id_cuenta,suelda) VALUES (1,9999.99); -- 1 - 9999.99 - '06-11-2024'
+-- FORMA 1
+CREATE TABLE Persona (
+  dni INT,
+  nombre VARCHAR,
+  IDPAISNACIMIENTO CHAR,
+  correo VARCHAR
+);
+
+ALTER TABLE Persona DROP COLUMN correo; -- eliminar culumna llamada correo
+CREATE TABLE Persona (
+  dni INT,
+  nombre VARCHAR,
+  IDPAISNACIMIENTO CHAR
+);
+--
+CREATE TABLE Pais (
+  id_pais INT,
+  nombre_pais VARCHAR
+);
+
+ALTER TABLE Persona
+ADD (IDPAISNACIMEINTO CHAR REFERENCES Pais(id_pais))
+-- FORMA 2
+  
+CREATE TABLE Persona (
+  dni INT,
+  nombre VARCHAR,
+  IDPAISNACIMIENTO CHAR,
+  FOREIGN KEY (IDPAISNACIMIENTO) REFERENCES Pais(id_pais)
+);
+
+CREATE TABLE Pais (
+  id_pais INT,
+  nombre_pais VARCHAR
+);
+--
 -- 1. Igual `=`
 SELECT * 
 FROM Personas 
