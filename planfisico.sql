@@ -92,9 +92,7 @@ CREATE TABLE Firmas (
   dni CHAR(8) NOT NULL,
   id_contrato INT NOT NULL,
   id_estado INT NOT NULL,
-  FOREIGN KEY (id_validacion) REFERENCES ValidacionFacial(id_validacion),
-  FOREIGN KEY (dni) REFERENCES ValidacionFacial(dni),
-  FOREIGN KEY (id_estado) REFERENCES ValidacionFacial(id_estado),
+  FOREIGN KEY (id_validacion, dni, id_estado) REFERENCES ValidacionFacial(id_validacion, dni, id_estado),
   FOREIGN KEY (id_contrato) REFERENCES Contratos (id_contrato),
   PRIMARY KEY (id_validacion, dni, id_estado, id_contrato)
 );
