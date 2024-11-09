@@ -98,11 +98,13 @@ CREATE TABLE Firmas (
 );
 
 CREATE TABLE Imagenes (
-  id_imagen INT NOT NULL,
+  id_imagen INT IDENTITY(1,1) NOT NULL,
   id_validacion INT NOT NULL,
   imagen VARCHAR(15) NOT NULL,
   fecha_envio_imagen DATE NOT NULL,
   detalles_imagen VARCHAR(50) NOT NULL,
-  FOREIGN KEY (id_validacion) REFERENCES ValidacionFacial (id_validacion),
-  PRIMARY KEY (id_imagen, id_validacion)
+  dni INT NOT NULL,
+  id_estado INT NOT NULL,
+  FOREIGN KEY (id_validacion, dni, id_estado) REFERENCES ValidacionFacial (id_validacion, dni, id_estado),
+  PRIMARY KEY (id_imagen, id_validacion, dni, id_estado)
 );
