@@ -97,3 +97,55 @@ HAVING COUNT(*) > 1;
 SELECT id_venta, vendedor, producto, cantidad, precio_unitario, fecha_venta
 FROM Ventas
 ORDER BY vendedor ASC, fecha_venta DESC;
+
+-- E AIX
+CREATE TABLE Compras (
+    id_compra INT PRIMARY KEY,
+    cliente VARCHAR(50),
+    producto VARCHAR(50),
+    cantidad INT,
+    precio_unitario DECIMAL(10, 2),
+    fecha_compra DATE
+);
+
+INSERT INTO Compras (id_compra, cliente, producto, cantidad, precio_unitario, fecha_compra)
+VALUES
+(1, 'Juan', 'Tablet', 2, 300.00, '2024-01-10'),
+(2, 'Juan', 'Smartphone', 1, 500.00, '2024-01-15'),
+(3, 'Maria', 'Laptop', 1, 800.00, '2024-02-05'),
+(4, 'Carlos', 'Tablet', 3, 300.00, '2024-02-10'),
+(5, 'Ana', 'Smartwatch', 2, 150.00, '2024-02-15'),
+(6, 'Juan', 'Laptop', 1, 850.00, '2024-03-01'),
+(7, 'Maria', 'Smartphone', 2, 550.00, '2024-03-10'),
+(8, 'Carlos', 'Tablet', 1, 310.00, '2024-03-15'),
+(9, 'Ana', 'Laptop', 1, 820.00, '2024-03-20'),
+(10, 'Carlos', 'Smartwatch', 4, 140.00, '2024-03-25');
+
+-- 
+SELECT cliente, SUM(cantidad) AS total_productos
+FROM Compras
+GROUP BY cliente
+HAVING SUM(cantidad) > 3;
+
+-- e1
+CREATE TABLE Empleados (
+    id_empleado INT PRIMARY KEY,
+    nombre VARCHAR(50),
+    departamento VARCHAR(50),
+    salario DECIMAL(10, 2),
+    fecha_contratacion DATE
+);
+
+INSERT INTO Empleados (id_empleado, nombre, departamento, salario, fecha_contratacion)
+VALUES
+(1, 'Carlos', 'Ventas', 3000.00, '2022-05-10'),
+(2, 'Ana', 'Marketing', 4000.00, '2020-08-15'),
+(3, 'Luis', 'Ventas', 3200.00, '2023-02-01'),
+(4, 'Maria', 'Finanzas', 5000.00, '2021-11-20'),
+(5, 'Pedro', 'Ventas', 3100.00, '2022-07-25');
+
+-- 
+SELECT nombre, departamento, salario, fecha_contratacion
+FROM Empleados
+ORDER BY departamento ASC, salario DESC;
+
