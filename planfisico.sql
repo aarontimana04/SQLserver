@@ -53,7 +53,7 @@ CREATE TABLE ClienteGrupo (
   dni CHAR(8) NOT NULL,
   id_grupo INT NOT NULL,
   fecha_creacion_grupo DATE NOT NULL,
-  estado BIT NOY NULL,
+  estado BIT NOT NULL,
   FOREIGN KEY (dni) REFERENCES Clientes (dni),
   FOREIGN KEY (id_grupo) REFERENCES Grupos (id_grupo),
   PRIMARY KEY (dni, id_grupo)
