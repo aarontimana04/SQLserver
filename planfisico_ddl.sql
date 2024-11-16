@@ -89,8 +89,7 @@ CREATE TABLE ValidacionFacial (
   FOREIGN KEY (id_contrato) REFERENCES Contratos (id_contrato),
   PRIMARY KEY (id_validacion, dni, id_estado, id_contrato)
 );
--- VERIFICAR DE AQUI EN ADELANTE
--- version corregida
+--
 CREATE TABLE Imagenes (
   id_imagen INT IDENTITY(1,1) NOT NULL,
   id_validacion INT NOT NULL,
@@ -102,7 +101,7 @@ CREATE TABLE Imagenes (
   FOREIGN KEY (id_validacion, dni, id_estado, id_contrato) REFERENCES ValidacionFacial (id_validacion, dni, id_estado, id_contrato),
   PRIMARY KEY (id_imagen, id_validacion, dni, id_estado, id_contrato)
 );
-
+--
 CREATE TABLE DetallesImagen (
   id_detalles_imagen INT IDENTITY(1,1) NOT NULL,
   detalle_imagen VARCHAR(100) NOT NULL,
