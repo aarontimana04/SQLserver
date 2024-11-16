@@ -72,5 +72,32 @@ JOIN Contratos C ON EST.id_estado = C.id_estado
 JOIN Clientes CL ON C.dni = CL.dni
 GROUP BY EST.nombre_estado;
 
+-- INDICES
+CREATE INDEX idx_usuarios_id_empresa ON Usuarios(id_empresa);
 
+CREATE INDEX idx_contratos_id_estado ON Contratos(id_estado);
+
+CREATE INDEX idx_contratos_dni ON Contratos(dni);
+
+CREATE INDEX idx_usuarios_id_empresa_rol ON Usuarios(id_empresa, id_rol);
+
+CREATE INDEX idx_clientes_dni_grupo ON ClienteGrupo(dni, id_grupo);
+
+CREATE INDEX idx_contratos_dni_empresa_estado ON Contratos(dni, id_empresa, id_estado);
+
+CREATE INDEX idx_clientes_dni_grupo ON ClienteGrupo(dni, id_grupo);
+
+CREATE INDEX idx_documentos_id_contrato ON Documentos(id_contrato);
+
+CREATE INDEX idx_contratos_dni_empresa_estado ON Contratos(dni, id_empresa, id_estado);
+
+CREATE INDEX idx_clientes_dni_grupo ON ClienteGrupo(dni, id_grupo);
+
+CREATE INDEX idx_contratos_dni_empresa ON Contratos(dni, id_empresa);
+
+CREATE INDEX idx_contratos_id_empresa ON Contratos(id_empresa);
+
+CREATE INDEX idx_contratos_id_estado_dni ON Contratos(id_estado, dni);
+
+CREATE INDEX idx_clientes_dni ON Clientes(dni);
 
