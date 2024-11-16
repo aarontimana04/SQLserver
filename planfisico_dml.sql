@@ -1,35 +1,37 @@
 -- Insertar personas (30 distintas)
+-- CHECK
 INSERT INTO Personas (dni, correo, telefono, nombre_persona, primer_apellido, segundo_apellido) VALUES
 ('12345678', 'juan.perez@gmail.com', 987654321, 'Juan', 'Perez', 'Lopez'),
 ('23456789', 'ana.garcia@hotmail.com', 987654322, 'Ana', 'Garcia', 'Mendez'),
 ('34567890', 'maria.lopez@gmail.com', 987654323, 'Maria', 'Lopez', 'Gonzalez'),
 ('45678901', 'pedro.sanchez@hotmail.com', 987654324, 'Pedro', 'Sanchez', 'Diaz'),
 ('56789012', 'luisa.martinez@gmail.com', 987654325, 'Luisa', 'Martinez', 'Romero'),
-('67890123', 'ricardo.morales@hotmail.com', 987654326, 'Ricardo', 'Morales', 'Torres'),
+('07890123', 'ricardo.morales@hotmail.com', 987654326, 'Ricardo', 'Morales', 'Torres'),
 ('78901234', 'sofia.gonzalez@gmail.com', 987654327, 'Sofia', 'Gonzalez', 'Ruiz'),
 ('89012345', 'carlos.rodriguez@hotmail.com', 987654328, 'Carlos', 'Rodriguez', 'Martinez'),
 ('90123456', 'luz.perez@gmail.com', 987654329, 'Luz', 'Perez', 'Lopez'),
-('12340123', 'rafael.martin@hotmail.com', 987654330, 'Rafael', 'Martin', 'Lopez'),
-('23451234', 'marta.perez@gmail.com', 987654331, 'Marta', 'Perez', 'Castro'),
-('34562345', 'ricardo.lopez@hotmail.com', 987654332, 'Ricardo', 'Lopez', 'Perez'),
-('45673456', 'elena.garcia@gmail.com', 987654333, 'Elena', 'Garcia', 'Martinez'),
-('56784567', 'eduardo.sanchez@hotmail.com', 987654334, 'Eduardo', 'Sanchez', 'Gomez'),
-('67895678', 'patricia.martinez@gmail.com', 987654335, 'Patricia', 'Martinez', 'Morales'),
-('78906789', 'manuel.rodriguez@hotmail.com', 987654336, 'Manuel', 'Rodriguez', 'Hernandez'),
-('89017890', 'beatriz.perez@gmail.com', 987654337, 'Beatriz', 'Perez', 'Lopez'),
-('90128901', 'gustavo.garcia@hotmail.com', 987654338, 'Gustavo', 'Garcia', 'Martinez'),
-('12347890', 'carmen.morales@gmail.com', 987654339, 'Carmen', 'Morales', 'Gonzalez'),
-('23458901', 'juanita.sanchez@hotmail.com', 987654340, 'Juanita', 'Sanchez', 'Martinez'),
-('34569012', 'julio.rodriguez@gmail.com', 987654341, 'Julio', 'Rodriguez', 'Lopez'),
-('45670123', 'rosa.morales@hotmail.com', 987654342, 'Rosa', 'Morales', 'Perez'),
-('56781234', 'pedro.morales@gmail.com', 987654343, 'Pedro', 'Morales', 'Garcia'),
-('67892345', 'liliana.garcia@hotmail.com', 987654344, 'Liliana', 'Garcia', 'Lopez'),
-('78903456', 'victor.martinez@gmail.com', 987654345, 'Victor', 'Martinez', 'Lopez'),
-('89014567', 'elizabeth.rodriguez@hotmail.com', 987654346, 'Elizabeth', 'Rodriguez', 'Martinez'),
-('90125678', 'oscar.lopez@gmail.com', 987654347, 'Oscar', 'Lopez', 'Gonzalez'),
-('12356789', 'veronica.morales@hotmail.com', 987654348, 'Veronica', 'Morales', 'Diaz');
+('22340123', 'rafael.martin@hotmail.com', 987654330, 'Rafael', 'Martin', 'Lopez'),
+('43451234', 'marta.perez@gmail.com', 987654331, 'Marta', 'Perez', 'Castro'),
+('84562345', 'ricardo.lopez@hotmail.com', 987654332, 'Ricardo', 'Lopez', 'Perez'),
+('05673456', 'elena.garcia@gmail.com', 987654333, 'Elena', 'Garcia', 'Martinez'),
+('06784567', 'eduardo.sanchez@hotmail.com', 987654334, 'Eduardo', 'Sanchez', 'Gomez'),
+('17895678', 'patricia.martinez@gmail.com', 987654335, 'Patricia', 'Martinez', 'Morales'),
+('18906789', 'manuel.rodriguez@hotmail.com', 987654336, 'Manuel', 'Rodriguez', 'Hernandez'),
+('69017890', 'beatriz.perez@gmail.com', 987654337, 'Beatriz', 'Perez', 'Lopez'),
+('70128901', 'gustavo.garcia@hotmail.com', 987654338, 'Gustavo', 'Garcia', 'Martinez'),
+('42347890', 'carmen.morales@gmail.com', 987654339, 'Carmen', 'Morales', 'Gonzalez'),
+('03458901', 'juanita.sanchez@hotmail.com', 987654340, 'Juanita', 'Sanchez', 'Martinez'),
+('94569012', 'julio.rodriguez@gmail.com', 987654341, 'Julio', 'Rodriguez', 'Lopez'),
+('85670123', 'rosa.morales@hotmail.com', 987654342, 'Rosa', 'Morales', 'Perez'),
+('26781234', 'pedro.morales@gmail.com', 987654343, 'Pedro', 'Morales', 'Garcia'),
+('27892345', 'liliana.garcia@hotmail.com', 987654344, 'Liliana', 'Garcia', 'Lopez'),
+('38903456', 'victor.martinez@gmail.com', 987654345, 'Victor', 'Martinez', 'Lopez'),
+('69014567', 'elizabeth.rodriguez@hotmail.com', 987654346, 'Elizabeth', 'Rodriguez', 'Martinez'),
+('50125678', 'oscar.lopez@gmail.com', 987654347, 'Oscar', 'Lopez', 'Gonzalez'),
+('52356789', 'veronica.morales@hotmail.com', 987654348, 'Veronica', 'Morales', 'Diaz');
 
 -- Insertar empresas (15 distintas)
+-- CHECK
 INSERT INTO Empresas (ruc, nombre_empresa) VALUES
 ('20432123456', 'Empresa A'),
 ('20654321321', 'Empresa B'),
@@ -48,6 +50,7 @@ INSERT INTO Empresas (ruc, nombre_empresa) VALUES
 ('20123456765', 'Empresa O');
 
 -- Insertar roles (2 tipos: asesor y supervisor)
+-- CHECK
 INSERT INTO Rol (nombre_rol, detalles) VALUES
 ('asesor', 'Asesor de clientes'),
 ('supervisor', 'Supervisor de operaciones');
