@@ -196,6 +196,7 @@ INSERT INTO Documentos (nombre_documento, id_contrato, ruta_documento, fecha_adj
 ('documento15.pdf', 15, 'ruta/documento15.pdf', '2024-01-15');
 
 -- Insertar validaciones faciales (15 validaciones)
+-- MODIFICAR SEGÚN LAS TABLAS INVOLUCRADAS Y SU DATA, ESO SOLO IN EJEMPLO DE INSERCION
 INSERT INTO ValidacionFacial (dni, id_estado, id_contrato) VALUES
 ('12345678', 1, 1),
 ('23456789', 2, 2),
@@ -213,7 +214,8 @@ INSERT INTO ValidacionFacial (dni, id_estado, id_contrato) VALUES
 ('56784567', 2, 14),
 ('67895678', 1, 15);
 
--- Insertar imágenes (15 imágenes) --
+-- Insertar imágenes (15 imágenes)
+-- MODIFICAR SEGÚN LAS TABLAS INVOLUCRADAS Y SU DATA, ESO SOLO IN EJEMPLO DE INSERCION
 INSERT INTO Imagenes (id_validacion, dni, id_estado, id_contrato, imagen, fecha_envio_imagen) VALUES
 (1, '12345678', 1, 1, 'imagen1.jpg', '2024-01-01'),
 (2, '23456789', 2, 2, 'imagen2.jpg', '2024-01-02'),
@@ -232,6 +234,7 @@ INSERT INTO Imagenes (id_validacion, dni, id_estado, id_contrato, imagen, fecha_
 (15, '67895678', 1, 15, 'imagen15.jpg', '2024-01-15');
 
 -- Insertar detalles de imágenes (15 detalles de imágenes)
+-- MODIFICAR SEGÚN LAS TABLAS INVOLUCRADAS Y SU DATA, ESO SOLO IN EJEMPLO DE INSERCION
 INSERT INTO DetallesImagenes (detalle_imagen, id_imagen, id_validacion, dni, id_estado, id_contrato) VALUES
 ('Foto principal del documento',1,1, '12345678', 1, 1, 'imagen1.jpg', '2024-01-01'),
 ('Foto secundaria del documento',2,2, '23456789', 2, 2, 'imagen2.jpg', '2024-01-02'),
