@@ -105,3 +105,27 @@ CREATE TABLE Imagenes (
   FOREIGN KEY (id_validacion) REFERENCES ValidacionFacial (id_validacion),
   PRIMARY KEY (id_imagen, id_validacion)
 );
+-- version corregida
+CREATE TABLE Imagenes (
+  id_imagen INT IDENTITY(1,1) NOT NULL,
+  id_validacion INT NOT NULL,
+  dni CHAR(8) NOT NULL,
+  id_estado INT NOT NULL,
+  id_contrato INT NOT NULL,
+  imagen VARCHAR(15) NOT NULL,
+  fecha_envio_imagen DATE NOT NULL,
+  FOREIGN KEY (id_validacion, dni, id_estado, id_contrato) REFERENCES ValidacionFacial (id_validacion, dni, id_estado, id_contrato),
+  PRIMARY KEY (id_imagen, id_validacion, dni, id_estado, id_contrato)
+);
+
+CREATE TABLE DetallesImagen (
+  id_detalles_imagen INT NOT NULL,
+  detalle_imagen VARCHAR(100) NOT NULL,
+  id_imagen INT NOT NULL,
+  id_validacion INT NOT NULL,
+  dni CHAR(8) NOT NULL,
+  id_estado INT NOT NULL,
+  id_contrato INT NOT NULL,
+  FOREIGN KEY (id_imagen, id_validacion, dni, id_estado, id_contrato) REFERENCES Imagenes (id_imagen, id_validacion, dni, id_estado, id_contrato),
+  PRIMARY KEY (id_detalles_imagen, id_imagen, id_validacion, dni, id_estado, id_contrato)
+);
