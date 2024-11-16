@@ -104,7 +104,7 @@ CREATE TABLE Imagenes (
 );
 
 CREATE TABLE DetallesImagen (
-  id_detalles_imagen INT NOT NULL,
+  id_detalles_imagen INT IDENTITY(1,1) NOT NULL,
   detalle_imagen VARCHAR(100) NOT NULL,
   id_imagen INT NOT NULL,
   id_validacion INT NOT NULL,
