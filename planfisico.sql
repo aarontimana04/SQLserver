@@ -90,21 +90,6 @@ CREATE TABLE ValidacionFacial (
   PRIMARY KEY (id_validacion, dni, id_estado, id_contrato)
 );
 -- VERIFICAR DE AQUI EN ADELANTE
-CREATE TABLE DetallesImagen (
-  id_detalles_imagen INT PRIMARY KEY IDENTITY(1,1),
-  detalle_imagen VARCHAR(100) NOT NULL
-);
-
-CREATE TABLE Imagenes (
-  id_imagen INT IDENTITY(1,1) NOT NULL,
-  id_validacion INT NOT NULL,
-  imagen VARCHAR(15) NOT NULL,
-  fecha_envio_imagen DATE NOT NULL,
-  id_detalles_imagen INT NOT NULL,
-  FOREIGN KEY (id_detalles_imagen) REFERENCES DetallesImagen (id_detalles_imagen),
-  FOREIGN KEY (id_validacion) REFERENCES ValidacionFacial (id_validacion),
-  PRIMARY KEY (id_imagen, id_validacion)
-);
 -- version corregida
 CREATE TABLE Imagenes (
   id_imagen INT IDENTITY(1,1) NOT NULL,
