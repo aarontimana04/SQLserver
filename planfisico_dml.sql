@@ -158,6 +158,7 @@ INSERT INTO ClienteGrupo (dni, id_grupo, fecha_creacion_grupo) VALUES
 ('43451234', 1, '2024-02-15');
 
 -- Insertar contratos (15 contratos)
+-- CHECK
 INSERT INTO Contratos (fecha_creacion_contrato, dni, id_empresa, id_estado) VALUES
 ('2024-01-01', '02473219', 1, 1),
 ('2024-01-02', '45678901', 2, 2),
