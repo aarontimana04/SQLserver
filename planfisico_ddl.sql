@@ -2,7 +2,7 @@ CREATE DATABASE CONTRATOS_DIGITALES;
 -- 
 CREATE TABLE Personas (
   dni CHAR(8) PRIMARY KEY NOT NULL,
-  correo VARCHAR(25) NOT NULL,
+  correo VARCHAR(40) NOT NULL,
   telefono INT NOT NULL,
   nombre_persona VARCHAR(25) NOT NULL,
   primer_apellido VARCHAR(15) NOT NULL,
