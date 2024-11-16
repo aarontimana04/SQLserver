@@ -56,22 +56,23 @@ INSERT INTO Rol (nombre_rol, detalles) VALUES
 ('supervisor', 'Supervisor de operaciones');
 
 -- Insertar clientes (15, con fechas de nacimiento hacia el 2000 o antes)
+-- CHECK
 INSERT INTO Clientes (dni, direccion, fecha_nacimiento) VALUES
-('12345678', 'Lima, Av. Pardo', '1995-04-23'),
-('23456789', 'Arequipa, Calle Junín', '1990-07-12'),
-('34567890', 'Cusco, Av. Sol', '1992-02-15'),
-('45678901', 'Trujillo, Calle Libertad', '1987-11-30'),
-('56789012', 'Piura, Calle Grau', '1991-06-05'),
-('67890123', 'Chiclayo, Av. Santa Rosa', '1993-12-17'),
-('78901234', 'Lima, Calle Callao', '1989-01-25'),
-('89012345', 'Arequipa, Calle San Martín', '1994-08-14'),
-('90123456', 'Iquitos, Av. Comercio', '1986-03-19'),
-('12340123', 'Huancayo, Calle Real', '1992-10-09'),
-('23451234', 'Ayacucho, Av. Cusco', '1990-01-07'),
-('34562345', 'Lima, Calle de la Colmena', '1988-12-23'),
-('45673456', 'Tacna, Calle Zela', '1991-11-05'),
-('56784567', 'Lima, Av. Pizarro', '1987-09-15'),
-('67895678', 'Huánuco, Av. Dos de Mayo', '1990-05-30');
+('05673456', 'Lima, Av. Pardo', '1995-04-23'),
+('03458901', 'Arequipa, Calle Junín', '1990-07-12'),
+('06784567', 'Cusco, Av. Sol', '1992-02-15'),
+('07890123', 'Trujillo, Calle Libertad', '1987-11-30'),
+('12345678', 'Piura, Calle Grau', '1991-06-05'),
+('17895678', 'Chiclayo, Av. Santa Rosa', '1993-12-17'),
+('18906789', 'Lima, Calle Callao', '1989-01-25'),
+('22340123', 'Arequipa, Calle San Martín', '1994-08-14'),
+('23456789', 'Iquitos, Av. Comercio', '1986-03-19'),
+('26781234', 'Huancayo, Calle Real', '1992-10-09'),
+('27892345', 'Ayacucho, Av. Cusco', '1990-01-07'),
+('34567890', 'Lima, Calle de la Colmena', '1988-12-23'),
+('38903456', 'Tacna, Calle Zela', '1991-11-05'),
+('42347890', 'Lima, Av. Pizarro', '1987-09-15'),
+('43451234', 'Huánuco, Av. Dos de Mayo', '1990-05-30');
 
 -- Insertar usuarios (15 distintos, ninguno repite cliente)
 INSERT INTO Usuarios (dni, id_empresa, id_rol, estado) VALUES
