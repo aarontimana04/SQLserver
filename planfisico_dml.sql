@@ -177,9 +177,10 @@ INSERT INTO Contratos (fecha_creacion_contrato, dni, id_empresa, id_estado) VALU
 ('2024-01-15', '94569012', 15, 1);
 
 -- Insertar documentos (15 documentos)
+-- CHECK
 INSERT INTO Documentos (nombre_documento, id_contrato, ruta_documento, fecha_adjunto) VALUES
-('documento1.pdf', 1, 'ruta/documento1.pdf', '2024-01-01'),
-('documento2.pdf', 2, 'ruta/documento2.pdf', '2024-01-02'),
+('documento1.pdf', 17, 'ruta/documento1.pdf', '2024-01-01'),
+('documento2.pdf', 16, 'ruta/documento2.pdf', '2024-01-02'),
 ('documento3.pdf', 3, 'ruta/documento3.pdf', '2024-01-03'),
 ('documento4.pdf', 4, 'ruta/documento4.pdf', '2024-01-04'),
 ('documento5.pdf', 5, 'ruta/documento5.pdf', '2024-01-05'),
