@@ -98,12 +98,14 @@ INSERT INTO Usuarios (dni, id_empresa, id_rol, estado) VALUES
 ('65739200', 15, 1, 1);
 
 -- Insertar estados (3 tipos)
+-- CHECK
 INSERT INTO Estados (nombre_estado) VALUES
 ('pendiente'),
 ('firmado'),
 ('rechazado');
 
 -- Insertar grupos (15 distintos)
+--CHECK
 INSERT INTO Grupos (nombre_grupo) VALUES
 ('Grupo 1'),
 ('Grupo 2'),
