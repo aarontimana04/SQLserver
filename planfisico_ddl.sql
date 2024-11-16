@@ -23,7 +23,7 @@ CREATE TABLE Rol (
 -- 
 CREATE TABLE Clientes (
   dni CHAR(8) NOT NULL,
-  direccion VARCHAR(25) NOT NULL,
+  direccion VARCHAR(40) NOT NULL,
   fecha_nacimiento DATE NOT NULL,
   FOREIGN KEY (dni) REFERENCES Personas(dni),
   PRIMARY KEY (dni)
