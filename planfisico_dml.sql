@@ -30,6 +30,10 @@ INSERT INTO Personas (dni, correo, telefono, nombre_persona, primer_apellido, se
 ('50125678', 'oscar.lopez@gmail.com', 987654347, 'Oscar', 'Lopez', 'Gonzalez'),
 ('52356789', 'veronica.morales@hotmail.com', 987654348, 'Veronica', 'Morales', 'Diaz');
 
+INSERT INTO Personas 
+VALUES ('02473219', 'jose.valdez@hotmail.com', 982365471, 'jose','valdez','aragon'),
+        ('65739200', 'pedro.timana@gmail.com', 900455786, 'pedro','timana','ancajima');
+
 -- Insertar empresas (15 distintas)
 -- CHECK
 INSERT INTO Empresas (ruc, nombre_empresa) VALUES
