@@ -46,6 +46,28 @@ JOIN Preferencias AS PF
 ON P.genero = PF.nombre_preferencia
 JOIN Productoras AS PT
 ON PT.nombre_productora = PF.nombre_preferencia
+JOIN Usuario-Preferencia AS U
+ON U.id_preferencia = PF.id_preferencia
+WHERE U.id_usuario = id_user;
+
+-- funcion de llamado
+CREATE OR REPLACE FUNCTION list_pref(INT id_user)
+AS BEGIN
+  SELECT P.nombre_pelicula
+  FROM Peliculas AS P
+  JOIN Preferencias AS PF
+  ON P.genero = PF.nombre_preferencia
+  JOIN Productoras AS PT
+  ON PT.nombre_productora = PF.nombre_preferencia
+  JOIN Usuario-Preferencia AS U
+  ON U.id_preferencia = PF.id_preferencia
+  WHERE U.id_usuario = id_user;
+END;
+
+
+
+
+
 
 
 
