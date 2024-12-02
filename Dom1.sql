@@ -10,6 +10,19 @@ GROUP BY P.nombre
 HAVING COUNT(DISTINCT C.id_canal) = 1
 ORDER BY P.nombre;
 
+SELECT P.nombre AS 'Pais de origen', COUNT(C.id_canal) AS 'Cantidad'
+FROM CANAL AS CA
+JOIN CATEGORIA AS CAT
+ON CA.id_categoria = CAT.id_categoria
+JOIN TIPOCANAL TCA 
+ON TCA.id_tipocanal = CA.id_tipocanal
+JOIN PAIS AS P 
+ON CA.id_pais = P.id_pais
+WHERE CAT.descripcion = "Variables" AND TCA.descripcion = "Normal"
+GROUP BY P.nombre
+ORDER BY P.nombre ASC;
+
+
 - Listado de los 10 programas con más emisiones el día 25 de noviembre pero que cuya emisión tenga un rating mayor o igual a 5, ordenado por la cantidad de veces emitida
 
 SELECT TOP 10 P.id_programa AS Programa, P.titulo AS Nombre, COUNT(*) AS emisiones
